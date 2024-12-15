@@ -3,16 +3,18 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.ui.test.testHeroku.DynamicControls">
+      <class name="com.ui.test.testHeroku.DownloadFile">
         <methods>
           <include name="afterTest"/>
           <include name="beforeTest"/>
-          <include name="addRemoveCheckbox"/>
           <include name="config"/>
+          <include name="openExitIntentPage"/>
           <include name="afterMethod"/>
+          <include name="downloadFile"/>
+          <include name="openApp"/>
           <include name="beforeMethod"/>
         </methods>
-      </class> <!-- com.ui.test.testHeroku.DynamicControls -->
+      </class> <!-- com.ui.test.testHeroku.DownloadFile -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

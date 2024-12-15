@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="7" passed="6" failed="1" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-12-15T05:50:20 IST" name="Default suite" finished-at="2024-12-15T05:51:51 IST" duration-ms="90795">
+  <suite started-at="2024-12-16T03:44:06 IST" name="Default suite" finished-at="2024-12-16T03:45:18 IST" duration-ms="71634">
     <groups>
     </groups>
-    <test started-at="2024-12-15T05:50:20 IST" name="Default test" finished-at="2024-12-15T05:51:51 IST" duration-ms="90795">
-      <class name="com.ui.test.testHeroku.DynamicControls">
-        <test-method is-config="true" signature="config(java.lang.String,java.lang.String)[pri:0, instance:com.ui.test.testHeroku.DynamicControls@1e6a3214]" started-at="2024-12-15T05:50:20 IST" name="config" finished-at="2024-12-15T05:50:20 IST" duration-ms="19" status="PASS">
+    <test started-at="2024-12-16T03:44:06 IST" name="Default test" finished-at="2024-12-16T03:45:18 IST" duration-ms="71634">
+      <class name="com.ui.test.testHeroku.DownloadFile">
+        <test-method is-config="true" signature="config(java.lang.String,java.lang.String)[pri:0, instance:com.ui.test.testHeroku.DownloadFile@6574a52c]" started-at="2024-12-16T03:44:06 IST" name="config" finished-at="2024-12-16T03:44:06 IST" duration-ms="16" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -23,192 +23,91 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- config -->
-        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.ui.test.testHeroku.DynamicControls@1e6a3214]" started-at="2024-12-15T05:50:20 IST" name="beforeTest" finished-at="2024-12-15T05:50:21 IST" duration-ms="1143" status="PASS">
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.ui.test.testHeroku.DownloadFile@6574a52c]" started-at="2024-12-16T03:44:06 IST" name="beforeTest" finished-at="2024-12-16T03:44:07 IST" duration-ms="1181" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method signature="openApp()[pri:1, instance:com.ui.test.testHeroku.DynamicControls@1e6a3214]" started-at="2024-12-15T05:50:21 IST" name="openApp" description="Open App" finished-at="2024-12-15T05:50:25 IST" duration-ms="3487" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.ui.test.testHeroku.DownloadFile@6574a52c]" started-at="2024-12-16T03:44:07 IST" name="beforeMethod" finished-at="2024-12-16T03:44:07 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="openApp()[pri:1, instance:com.ui.test.testHeroku.DownloadFile@6574a52c]" started-at="2024-12-16T03:44:07 IST" name="openApp" description="Open App" finished-at="2024-12-16T03:44:13 IST" duration-ms="5513" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openApp -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.ui.test.testHeroku.DynamicControls@1e6a3214]" started-at="2024-12-15T05:50:21 IST" name="beforeMethod" finished-at="2024-12-15T05:50:21 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.ui.test.testHeroku.DynamicControls@1e6a3214]" started-at="2024-12-15T05:50:25 IST" name="afterMethod" finished-at="2024-12-15T05:50:35 IST" duration-ms="10121" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.ui.test.testHeroku.DownloadFile@6574a52c]" started-at="2024-12-16T03:44:13 IST" name="afterMethod" finished-at="2024-12-16T03:44:23 IST" duration-ms="10154" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=openApp status=SUCCESS method=DynamicControls.openApp()[pri:1, instance:com.ui.test.testHeroku.DynamicControls@1e6a3214] output={null}]]]>
+                <![CDATA[[TestResult name=openApp status=SUCCESS method=DownloadFile.openApp()[pri:1, instance:com.ui.test.testHeroku.DownloadFile@6574a52c] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method signature="openDropdownPage()[pri:2, instance:com.ui.test.testHeroku.DynamicControls@1e6a3214]" started-at="2024-12-15T05:50:35 IST" name="openDropdownPage" description="Open Dynamic Controls page" finished-at="2024-12-15T05:50:36 IST" duration-ms="1446" status="PASS">
+        <test-method signature="openExitIntentPage()[pri:2, instance:com.ui.test.testHeroku.DownloadFile@6574a52c]" started-at="2024-12-16T03:44:23 IST" name="openExitIntentPage" description="Open Download File page" finished-at="2024-12-16T03:44:25 IST" duration-ms="1499" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- openDropdownPage -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.ui.test.testHeroku.DynamicControls@1e6a3214]" started-at="2024-12-15T05:50:35 IST" name="beforeMethod" finished-at="2024-12-15T05:50:35 IST" duration-ms="0" status="PASS">
+        </test-method> <!-- openExitIntentPage -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.ui.test.testHeroku.DownloadFile@6574a52c]" started-at="2024-12-16T03:44:23 IST" name="beforeMethod" finished-at="2024-12-16T03:44:23 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.ui.test.testHeroku.DynamicControls@1e6a3214]" started-at="2024-12-15T05:50:36 IST" name="afterMethod" finished-at="2024-12-15T05:50:47 IST" duration-ms="10230" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.ui.test.testHeroku.DownloadFile@6574a52c]" started-at="2024-12-16T03:44:25 IST" name="afterMethod" finished-at="2024-12-16T03:44:35 IST" duration-ms="10151" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=openDropdownPage status=SUCCESS method=DynamicControls.openDropdownPage()[pri:2, instance:com.ui.test.testHeroku.DynamicControls@1e6a3214] output={null}]]]>
+                <![CDATA[[TestResult name=openExitIntentPage status=SUCCESS method=DownloadFile.openExitIntentPage()[pri:2, instance:com.ui.test.testHeroku.DownloadFile@6574a52c] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method signature="addRemoveCheckbox()[pri:3, instance:com.ui.test.testHeroku.DynamicControls@1e6a3214]" started-at="2024-12-15T05:50:47 IST" name="addRemoveCheckbox" description="Add/Remove checkbox and validate message" finished-at="2024-12-15T05:50:50 IST" duration-ms="3372" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [It's back!] but found [It's gone!]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [It's back!] but found [It's gone!]
-at org.testng.Assert.fail(Assert.java:110)
-at org.testng.Assert.failNotEquals(Assert.java:1577)
-at org.testng.Assert.assertEqualsImpl(Assert.java:149)
-at org.testng.Assert.assertEquals(Assert.java:131)
-at org.testng.Assert.assertEquals(Assert.java:655)
-at org.testng.Assert.assertEquals(Assert.java:665)
-at com.ui.test.testHeroku.DynamicControls.addRemoveCheckbox(DynamicControls.java:53)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:829)
-at org.testng.TestRunner.run(TestRunner.java:602)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
-at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-at org.testng.TestNG.runSuites(TestNG.java:1099)
-at org.testng.TestNG.run(TestNG.java:1067)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        <test-method signature="downloadFile()[pri:3, instance:com.ui.test.testHeroku.DownloadFile@6574a52c]" started-at="2024-12-16T03:44:35 IST" name="downloadFile" description="Download a file from the page" finished-at="2024-12-16T03:44:36 IST" duration-ms="1009" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addRemoveCheckbox -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.ui.test.testHeroku.DynamicControls@1e6a3214]" started-at="2024-12-15T05:50:47 IST" name="beforeMethod" finished-at="2024-12-15T05:50:47 IST" duration-ms="0" status="PASS">
+        </test-method> <!-- downloadFile -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.ui.test.testHeroku.DownloadFile@6574a52c]" started-at="2024-12-16T03:44:35 IST" name="beforeMethod" finished-at="2024-12-16T03:44:35 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.ui.test.testHeroku.DynamicControls@1e6a3214]" started-at="2024-12-15T05:50:50 IST" name="afterMethod" finished-at="2024-12-15T05:51:00 IST" duration-ms="10183" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.ui.test.testHeroku.DownloadFile@6574a52c]" started-at="2024-12-16T03:44:36 IST" name="afterMethod" finished-at="2024-12-16T03:44:46 IST" duration-ms="10128" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=addRemoveCheckbox status=FAILURE method=DynamicControls.addRemoveCheckbox()[pri:3, instance:com.ui.test.testHeroku.DynamicControls@1e6a3214] output={null}]]]>
+                <![CDATA[[TestResult name=downloadFile status=SUCCESS method=DownloadFile.downloadFile()[pri:3, instance:com.ui.test.testHeroku.DownloadFile@6574a52c] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method signature="addRemoveCheckbox()[pri:3, instance:com.ui.test.testHeroku.DynamicControls@1e6a3214]" started-at="2024-12-15T05:51:00 IST" name="addRemoveCheckbox" description="Add/Remove checkbox and validate message" finished-at="2024-12-15T05:51:04 IST" duration-ms="3294" status="PASS">
+        <test-method signature="downloadAllFile()[pri:4, instance:com.ui.test.testHeroku.DownloadFile@6574a52c]" started-at="2024-12-16T03:44:46 IST" name="downloadAllFile" description="Download all file from the page" finished-at="2024-12-16T03:45:08 IST" duration-ms="21606" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addRemoveCheckbox -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.ui.test.testHeroku.DynamicControls@1e6a3214]" started-at="2024-12-15T05:51:00 IST" name="beforeMethod" finished-at="2024-12-15T05:51:00 IST" duration-ms="0" status="PASS">
+        </test-method> <!-- downloadAllFile -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.ui.test.testHeroku.DownloadFile@6574a52c]" started-at="2024-12-16T03:44:46 IST" name="beforeMethod" finished-at="2024-12-16T03:44:46 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.ui.test.testHeroku.DynamicControls@1e6a3214]" started-at="2024-12-15T05:51:04 IST" name="afterMethod" finished-at="2024-12-15T05:51:14 IST" duration-ms="10128" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.ui.test.testHeroku.DownloadFile@6574a52c]" started-at="2024-12-16T03:45:08 IST" name="afterMethod" finished-at="2024-12-16T03:45:18 IST" duration-ms="10133" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=addRemoveCheckbox status=SUCCESS method=DynamicControls.addRemoveCheckbox()[pri:3, instance:com.ui.test.testHeroku.DynamicControls@1e6a3214] output={null}]]]>
+                <![CDATA[[TestResult name=downloadAllFile status=SUCCESS method=DownloadFile.downloadAllFile()[pri:4, instance:com.ui.test.testHeroku.DownloadFile@6574a52c] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method signature="enableDisableTextBox()[pri:4, instance:com.ui.test.testHeroku.DynamicControls@1e6a3214]" started-at="2024-12-15T05:51:14 IST" name="enableDisableTextBox" description="Enable/Disable input field and validate message" finished-at="2024-12-15T05:51:17 IST" duration-ms="3336" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- enableDisableTextBox -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.ui.test.testHeroku.DynamicControls@1e6a3214]" started-at="2024-12-15T05:51:14 IST" name="beforeMethod" finished-at="2024-12-15T05:51:14 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.ui.test.testHeroku.DynamicControls@1e6a3214]" started-at="2024-12-15T05:51:17 IST" name="afterMethod" finished-at="2024-12-15T05:51:27 IST" duration-ms="10188" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=enableDisableTextBox status=SUCCESS method=DynamicControls.enableDisableTextBox()[pri:4, instance:com.ui.test.testHeroku.DynamicControls@1e6a3214] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.ui.test.testHeroku.DynamicControls@1e6a3214]" started-at="2024-12-15T05:51:27 IST" name="beforeMethod" finished-at="2024-12-15T05:51:27 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="enableDisableTextBox()[pri:4, instance:com.ui.test.testHeroku.DynamicControls@1e6a3214]" started-at="2024-12-15T05:51:27 IST" name="enableDisableTextBox" description="Enable/Disable input field and validate message" finished-at="2024-12-15T05:51:30 IST" duration-ms="3305" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- enableDisableTextBox -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.ui.test.testHeroku.DynamicControls@1e6a3214]" started-at="2024-12-15T05:51:30 IST" name="afterMethod" finished-at="2024-12-15T05:51:41 IST" duration-ms="10180" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=enableDisableTextBox status=SUCCESS method=DynamicControls.enableDisableTextBox()[pri:4, instance:com.ui.test.testHeroku.DynamicControls@1e6a3214] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method signature="inputTextinTextbox()[pri:5, instance:com.ui.test.testHeroku.DynamicControls@1e6a3214]" started-at="2024-12-15T05:51:41 IST" name="inputTextinTextbox" description="Input something in textbox" finished-at="2024-12-15T05:51:41 IST" duration-ms="41" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- inputTextinTextbox -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.ui.test.testHeroku.DynamicControls@1e6a3214]" started-at="2024-12-15T05:51:41 IST" name="beforeMethod" finished-at="2024-12-15T05:51:41 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.ui.test.testHeroku.DynamicControls@1e6a3214]" started-at="2024-12-15T05:51:41 IST" name="afterMethod" finished-at="2024-12-15T05:51:51 IST" duration-ms="10157" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=inputTextinTextbox status=SUCCESS method=DynamicControls.inputTextinTextbox()[pri:5, instance:com.ui.test.testHeroku.DynamicControls@1e6a3214] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.ui.test.testHeroku.DynamicControls@1e6a3214]" started-at="2024-12-15T05:51:51 IST" name="afterTest" finished-at="2024-12-15T05:51:51 IST" duration-ms="154" status="PASS">
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.ui.test.testHeroku.DownloadFile@6574a52c]" started-at="2024-12-16T03:45:18 IST" name="afterTest" finished-at="2024-12-16T03:45:18 IST" duration-ms="221" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-      </class> <!-- com.ui.test.testHeroku.DynamicControls -->
+      </class> <!-- com.ui.test.testHeroku.DownloadFile -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
