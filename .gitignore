@@ -1,0 +1,10 @@
+#ignore the screenshot directory
+target/OrangeHRM
+
+#ignore follwoing package from main and test
+src/main/java/com/ui/pages/orangeHRM
+src/main/java/com/ui/pages/herokuApp
+
+#ignore follwoing package from main and test
+src/test/java/com/ui/test/orangeHRM
+src/test/java/com/ui/test/herokuApp
