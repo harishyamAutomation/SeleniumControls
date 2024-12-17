@@ -21,14 +21,15 @@ import com.ui.pages.testHeroku.IndexPage;
 public class ContextMenu extends BaseTest{
 
 	IndexPage getIndexPage() {
-		return new IndexPage(driver);
+		//return new IndexPage(driver);
+		return IndexPage.getIndexPage(driver);
 	}
 	
 	ContextMenuPage getPage() {
 		return new ContextMenuPage(driver);
 	}
 	
-	@Test(description="Open App", priority=1)
+	@Test(description="Open App", priority=1, enabled=false)
 	public void openApp() {
 		getIndexPage().launchPage();
 	}

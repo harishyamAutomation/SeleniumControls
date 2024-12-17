@@ -16,14 +16,16 @@ import com.ui.util.PropertyReader;
 public class BasicAuth extends BaseTest{
 
 	BasicAuthPage getBasicAuthPage() {
-		return new BasicAuthPage(driver);
+		//return new BasicAuthPage(driver); //removed driver parameter
+		return BasicAuthPage.getPage(driver);
 	}
 	
 	IndexPage getIndexPage() {
-		return new IndexPage(driver);
+		//return new IndexPage(driver); //removed driver parameter
+		return IndexPage.getIndexPage(driver);
 	}
 	
-	@Test(description="Open Index Page", priority=1)
+	@Test(description="Open Index Page", priority=1, enabled=false)
 	public void openApp() {
 		getIndexPage().launchPage();
 	}

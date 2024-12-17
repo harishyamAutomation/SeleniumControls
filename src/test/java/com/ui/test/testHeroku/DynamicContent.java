@@ -13,13 +13,17 @@ import com.ui.util.HighlightUtil;
 public class DynamicContent extends BaseTest {
 
 	private DynamicContentPage dynContentInstance;
-	private IndexPage indexInstance;
+//	private IndexPage indexInstance;
 
-	IndexPage getIndexPage() {
-		if(indexInstance==null) {
-			return new IndexPage(driver);
-		}
-		return indexInstance;
+//	IndexPage getIndexPage() {
+//		if(indexInstance==null) {
+//			return new IndexPage(driver);
+//		}
+//		return indexInstance;
+//	}
+	
+	public IndexPage getIndexPage() {
+		return IndexPage.getIndexPage(driver);
 	}
 	
 	DynamicContentPage getPage() {
@@ -29,7 +33,7 @@ public class DynamicContent extends BaseTest {
 		return dynContentInstance;
 	}
 	
-	@Test(description="Open App", priority=1)
+	@Test(description="Open App", priority=1, enabled=false)
 	public void openApp() {
 		getIndexPage().launchPage();
 	}

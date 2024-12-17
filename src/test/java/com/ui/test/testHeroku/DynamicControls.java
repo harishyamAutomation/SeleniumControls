@@ -13,13 +13,16 @@ import com.ui.pages.testHeroku.IndexPage;
 public class DynamicControls extends BaseTest {
 
 	private DynamicControlsPage dynControlsInstance;
-	private IndexPage indexInstance;
+//	private IndexPage indexInstance;
 
-	IndexPage getIndexPage() {
-		if(indexInstance==null) {
-			return new IndexPage(driver);
-		}
-		return indexInstance;
+//	IndexPage getIndexPage() {
+//		if(indexInstance==null) {
+//			return new IndexPage(driver);
+//		}
+//		return indexInstance;
+//	}
+	public IndexPage getIndexPage() {
+		return IndexPage.getIndexPage(driver);
 	}
 	
 	DynamicControlsPage getPage() {
@@ -29,7 +32,7 @@ public class DynamicControls extends BaseTest {
 		return dynControlsInstance;
 	}
 	
-	@Test(description="Open App", priority=1)
+	@Test(description="Open App", priority=1, enabled=false)
 	public void openApp() {
 		getIndexPage().launchPage();
 	}

@@ -8,3 +8,6 @@ src/main/java/com/ui/pages/herokuApp
 #ignore follwoing package from main and test
 src/test/java/com/ui/test/orangeHRM
 src/test/java/com/ui/test/herokuApp
+
+#ignore the report directory
+reports/

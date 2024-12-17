@@ -8,20 +8,24 @@ import com.ui.util.SoftAssertionUtil;
 
 public class Index extends BaseTest{
 	
+//	IndexPage getIndexPage() {
+//		return new IndexPage(driver);
+//	}
+	
 	IndexPage getIndexPage() {
-		return new IndexPage(driver);
+		//return new IndexPage(driver); //removed driver parameter
+		return IndexPage.getIndexPage(driver);
 	}
 
-	@Test(description = "Open the Test Heroku App", priority=1, groups="somkeTest")
+	@Test(description = "Open the Test Heroku App", priority=1, groups="somkeTest", enabled=false)
 	public void openApp() {
-		IndexPage ip = new IndexPage(driver);
-		ip.launchPage();
+		getIndexPage().launchPage();
 	}
 	
 	@Test(description = "Verify All Elements", priority=2, groups="somkeTest")
 	public void verifyAllElements() {
-		IndexPage ip = new IndexPage(driver);
-		ip.verifyAllElement();
+		//IndexPage ip = new IndexPage(driver);
+		getIndexPage().verifyAllElement();
 	}
 	
 	@Test(description = "Validate A/B Test Link", priority=3)

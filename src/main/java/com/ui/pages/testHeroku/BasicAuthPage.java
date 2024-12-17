@@ -13,10 +13,20 @@ public class BasicAuthPage {
 	WebDriver driver;
 	WebDriverWait wait;
 	
-	public BasicAuthPage(WebDriver driver) {
+	private static BasicAuthPage instance;
+	
+	private BasicAuthPage(WebDriver driver) {
 		this.driver=driver;
 		PageFactory.initElements(driver, this);
 		wait = new WebDriverWait(driver, Duration.ofSeconds(1));
+	}
+	
+	
+	public static BasicAuthPage getPage(WebDriver driver){
+		if(instance==null) {
+			instance = new BasicAuthPage(driver);
+		}
+		return instance;		
 	}
 	
 	@FindBy(xpath="//p[contains(text(),'Congratulations! You must have the proper credentials')]")

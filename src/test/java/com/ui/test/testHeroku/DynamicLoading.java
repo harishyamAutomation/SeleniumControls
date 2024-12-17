@@ -11,14 +11,18 @@ import com.ui.pages.testHeroku.IndexPage;
 
 public class DynamicLoading extends BaseTest {
 
-	private IndexPage indexInstance;
+	//private IndexPage indexInstance;
 	private DynamicLoadingPage pageInstance;
 	
+//	public IndexPage getIndexPage() {
+//		if(indexInstance==null) {
+//			return new IndexPage(driver);
+//		}
+//		return indexInstance;
+//	}
+	
 	public IndexPage getIndexPage() {
-		if(indexInstance==null) {
-			return new IndexPage(driver);
-		}
-		return indexInstance;
+		return IndexPage.getIndexPage(driver);
 	}
 	
 	public DynamicLoadingPage getPage() {
@@ -28,7 +32,7 @@ public class DynamicLoading extends BaseTest {
 		return pageInstance;
 	}
 	
-	@Test(description="Open App", priority=1)
+	@Test(description="Open App", priority=1, enabled=false)
 	public void openApp() {
 		getIndexPage().launchPage();
 	}

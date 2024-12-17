@@ -3,18 +3,18 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.ui.test.testHeroku.DownloadFile">
+      <class name="com.ui.test.testHeroku.AddRemoveEle">
         <methods>
           <include name="afterTest"/>
           <include name="beforeTest"/>
+          <include name="afterClass"/>
           <include name="config"/>
-          <include name="openExitIntentPage"/>
+          <include name="afterSuite"/>
+          <include name="verifyRemoveAllElements"/>
           <include name="afterMethod"/>
-          <include name="downloadFile"/>
-          <include name="openApp"/>
           <include name="beforeMethod"/>
         </methods>
-      </class> <!-- com.ui.test.testHeroku.DownloadFile -->
+      </class> <!-- com.ui.test.testHeroku.AddRemoveEle -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

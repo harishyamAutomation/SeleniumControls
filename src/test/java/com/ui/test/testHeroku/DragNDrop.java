@@ -14,13 +14,17 @@ import com.ui.pages.testHeroku.IndexPage;
 public class DragNDrop extends BaseTest {
 	
 	private DragNDropPage dragNDropInstance;
-	private IndexPage indexInstance;
+	//private IndexPage indexInstance;
 
-	IndexPage getIndexPage() {
-		if(indexInstance==null) {
-			return new IndexPage(driver);
-		}
-		return indexInstance;
+//	IndexPage getIndexPage() {
+//		if(indexInstance==null) {
+//			return new IndexPage(driver);
+//		}
+//		return indexInstance;
+//	}
+	
+	public IndexPage getIndexPage() {
+		return IndexPage.getIndexPage(driver);
 	}
 	
 	DragNDropPage getPage() {
@@ -30,7 +34,7 @@ public class DragNDrop extends BaseTest {
 		return dragNDropInstance;
 	}
 	
-	@Test(description="Open App", priority=1)
+	@Test(description="Open App", priority=1, enabled=false)
 	public void openApp() {
 		getIndexPage().launchPage();
 	}

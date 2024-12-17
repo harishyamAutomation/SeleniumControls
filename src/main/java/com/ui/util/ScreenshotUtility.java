@@ -9,10 +9,13 @@ import org.openqa.selenium.WebDriver;
 
 public class ScreenshotUtility {
 
+	static TakesScreenshot takeScreenshot;
 	public static void captureScreenshot(WebDriver driver, String screenShotName) {
 		try {
 			Thread.sleep(10000);
-			TakesScreenshot takeScreenshot = (TakesScreenshot) driver;
+			if(takeScreenshot==null) {
+				takeScreenshot = (TakesScreenshot) driver;
+			}
 			File source = takeScreenshot.getScreenshotAs(OutputType.FILE);
 			System.setProperty("org.uncommons.reportng.escape-output", "true");
 			File destination = new File("target/OrangeHRM/"+screenShotName+".png");

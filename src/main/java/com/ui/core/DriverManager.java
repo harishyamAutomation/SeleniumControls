@@ -17,26 +17,39 @@ import com.ui.util.PropertyReader;
 
 public class DriverManager {
 	
-	WebDriver driver;
+	private static WebDriver driver;
 	private static DriverType driverType;
-	ConfigurationManager configurationManager = new ConfigurationManager();
+	private static DriverManager instance;
+	//ConfigurationManager configurationManager = new ConfigurationManager();
 	
-	public DriverManager() {
-		driverType = configurationManager.getBrowser();
+//	public DriverManager() {
+//		driverType = configurationManager.getBrowser();
+//	}
+	
+	private DriverManager() {
+		driverType = ConfigurationManager.getConfigManager().getBrowser();
+	}
+	
+	public static DriverManager getDriverManager() {
+		//driverType = ConfigurationManager.getConfigManager().getBrowser();
+		if(instance==null) {
+			instance = new DriverManager();
+		}
+		return instance;
 	}
 	
 	public WebDriver getDriver() {
-		System.out.println("************************ Driver *************************"+configurationManager.properties.getProperty("firefox.driver.path"));
+		//System.out.println("************************ Driver *************************"+ConfigurationManager.properties.getProperty("firefox.driver.path"));
 		if(driver==null) {
 			driver = createDriver();
 		}
 		return driver;
 	}
 	
-	private WebDriver createDriver() {
+	private static WebDriver createDriver() {
 		switch(driverType) {
 		case FIREFOX:
-			System.setProperty("webdriver.firefox.driver", configurationManager.properties.getProperty("firefox.driver.path"));
+			System.setProperty("webdriver.firefox.driver", ConfigurationManager.getConfigManager().properties.getProperty("firefox.driver.path"));
 			FirefoxOptions fireFoxOptions = new FirefoxOptions();
 			fireFoxOptions.setAcceptInsecureCerts(true);
 			fireFoxOptions.addArguments("use-fake-ui-for-media-stream");
@@ -44,7 +57,7 @@ public class DriverManager {
 			driver  = new FirefoxDriver(fireFoxOptions);
 			break;
 		case CHROME:
-			System.setProperty("webdriver.chrome.driver", configurationManager.properties.getProperty("chrome.driver.path"));
+			System.setProperty("webdriver.chrome.driver", ConfigurationManager.getConfigManager().properties.getProperty("chrome.driver.path"));
 			
 			if(new File(PropertyReader.getProperty("downloadDirPath")).exists()) {
 				System.out.println("** DOWNLOAD DIR ** "+PropertyReader.getProperty("downloadDirPath"));
@@ -68,14 +81,14 @@ public class DriverManager {
 			driver = new ChromeDriver(chromeOptions);
 			break;
 		case EDGE:
-			System.setProperty("webdriver.edge.driver", configurationManager.properties.getProperty("edge.driver.path"));
+			System.setProperty("webdriver.edge.driver", ConfigurationManager.getConfigManager().properties.getProperty("edge.driver.path"));
 			EdgeOptions edgeOptions = new EdgeOptions();
 			edgeOptions.setAcceptInsecureCerts(true);
 			edgeOptions.addArguments("use-fake-ui-for-media-stream");
 			driver = new EdgeDriver(edgeOptions);
 			break;
 		default:
-			System.setProperty("webdriver.chrome.driver", configurationManager.properties.getProperty("chrome.driver.path"));
+			System.setProperty("webdriver.chrome.driver", ConfigurationManager.getConfigManager().properties.getProperty("chrome.driver.path"));
 			driver = new ChromeDriver();				
 		}
 		return driver;

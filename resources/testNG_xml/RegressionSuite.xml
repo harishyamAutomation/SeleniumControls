@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="SeleniumControls : RegressionTest">
+	<test name="Regression">
+	 <!-- <parameter name="reportName" value="Test Automation Report" />
+        <parameter name="flow" value="Test Flow" /> -->
+		<packages>
+			<package name="com.ui.test.testHeroku"></package>
+		</packages>
+	</test>
+</suite>

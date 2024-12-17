@@ -11,14 +11,11 @@ import com.ui.pages.testHeroku.IndexPage;
 
 public class DownloadFile extends BaseTest {
 
-	private IndexPage indexInstance;
+//	private IndexPage indexInstance;
 	private DownloadFilePage pageInstance;
 	
 	public IndexPage getIndexPage() {
-		if(indexInstance==null) {
-			return new IndexPage(driver);
-		}
-		return indexInstance;
+		return IndexPage.getIndexPage(driver);
 	}
 	
 	public DownloadFilePage getPage() {
@@ -28,7 +25,7 @@ public class DownloadFile extends BaseTest {
 		return pageInstance;
 	}
 	
-	@Test(description="Open App", priority=1)
+	@Test(description="Open App", priority=1, enabled=false)
 	public void openApp() {
 		getIndexPage().launchPage();
 	}

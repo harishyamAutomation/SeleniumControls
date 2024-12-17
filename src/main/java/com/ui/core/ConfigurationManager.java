@@ -11,27 +11,23 @@ import com.ui.enums.DriverType;
 public class ConfigurationManager {
 
 	public Properties properties;
-	String propertyFile = "resources/configuration.properties";
+	private static String propertyFile = "resources/configuration.properties";
+	private static ConfigurationManager instance;
 	
-	public ConfigurationManager() {
-		BufferedReader reader;
-		try {
-			reader = new BufferedReader(new FileReader(propertyFile));
-			properties = new Properties();
-			
-			try {
-				properties.load(reader);
-				reader.close();
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-			throw new RuntimeException("Properties file not found at the location : "+propertyFile);
+	 private ConfigurationManager() {
+	        try (BufferedReader reader = new BufferedReader(new FileReader(propertyFile))) {
+	            properties = new Properties();
+	            properties.load(reader);
+	        } catch (IOException e) {
+	            throw new RuntimeException("Properties file not found at: " + propertyFile, e);
+	        }
+	    }
+	
+	public static ConfigurationManager getConfigManager() {
+		if(instance==null) {
+			instance = new ConfigurationManager();
 		}
+		return instance;
 	}
 	
 	public DriverType getBrowser() {

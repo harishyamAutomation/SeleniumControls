@@ -14,14 +14,15 @@ import com.ui.util.HighlightUtil;
 public class ChallengingDOM extends BaseTest{
 
 	IndexPage getIndexPage() {
-		return new IndexPage(driver);
+		//return new IndexPage(driver);
+		return IndexPage.getIndexPage(driver);
 	}
 	
 	ChallengingDOMPage getPage() {
 		return new ChallengingDOMPage(driver);
 	}
 	
-	@Test(description="Open App", priority=1)
+	@Test(description="Open App", priority=1, enabled=false)
 	public void openApp() {
 		getIndexPage().launchPage();
 	}

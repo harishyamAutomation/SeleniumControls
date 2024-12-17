@@ -18,10 +18,19 @@ public class IndexPage {
 	WebDriver driver;
 	WebDriverWait wait;
 	
-	public IndexPage(WebDriver driver) {
+	private static IndexPage instance;
+	
+	private IndexPage(WebDriver driver) {
 		this.driver=driver;
 		PageFactory.initElements(driver, this);
 		wait = new WebDriverWait(driver, Duration.ofSeconds(2));
+	}
+	
+	public static IndexPage getIndexPage(WebDriver driver) {
+		if(instance==null) {
+			instance = new IndexPage(driver);
+		}
+		return instance; 
 	}
 	
 	public void launchPage() {

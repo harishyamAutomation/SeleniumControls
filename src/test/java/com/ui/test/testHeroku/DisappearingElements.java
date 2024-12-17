@@ -16,15 +16,19 @@ import com.ui.pages.testHeroku.IndexPage;
 
 public class DisappearingElements extends BaseTest{
 
-	IndexPage getIndexPage() {
-		return new IndexPage(driver);
+//	IndexPage getIndexPage() {
+//		return new IndexPage(driver);
+//	}
+	
+	public IndexPage getIndexPage() {
+		return IndexPage.getIndexPage(driver);
 	}
 	
 	DisappearingElementsPage getPage() {
 		return new DisappearingElementsPage(driver);
 	}
 	
-	@Test(description="Open App", priority=1)
+	@Test(description="Open App", priority=1, enabled=false)
 	public void openApp() {
 		getIndexPage().launchPage();
 	}

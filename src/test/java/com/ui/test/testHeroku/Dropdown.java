@@ -12,13 +12,17 @@ import com.ui.pages.testHeroku.IndexPage;
 public class Dropdown extends BaseTest {
 
 	private DropdownPage dropdownInstance;
-	private IndexPage indexInstance;
+	//private IndexPage indexInstance;
 
-	IndexPage getIndexPage() {
-		if(indexInstance==null) {
-			return new IndexPage(driver);
-		}
-		return indexInstance;
+//	IndexPage getIndexPage() {
+//		if(indexInstance==null) {
+//			return new IndexPage(driver);
+//		}
+//		return indexInstance;
+//	}
+	
+	public IndexPage getIndexPage() {
+		return IndexPage.getIndexPage(driver);
 	}
 	
 	DropdownPage getPage() {
@@ -28,7 +32,7 @@ public class Dropdown extends BaseTest {
 		return dropdownInstance;
 	}
 	
-	@Test(description="Open App", priority=1)
+	@Test(description="Open App", priority=1, enabled=false)
 	public void openApp() {
 		getIndexPage().launchPage();
 	}

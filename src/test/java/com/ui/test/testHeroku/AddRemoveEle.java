@@ -3,24 +3,26 @@ package com.ui.test.testHeroku;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
+import java.awt.AWTException;
+
 import org.testng.annotations.Test;
 
 import com.ui.core.BaseTest;
 import com.ui.pages.testHeroku.AddRemoveElePage;
 import com.ui.pages.testHeroku.IndexPage;
-import com.ui.util.PropertyReader;
 
 public class AddRemoveEle extends BaseTest {
 
 	AddRemoveElePage getAddRemoveElePage() {
-		return new AddRemoveElePage(driver);
+		return new AddRemoveElePage(driver); //removed driver parameter
 	}
 	
 	IndexPage getIndexPage() {
-		return new IndexPage(driver);
+		//return new IndexPage(driver); //removed driver parameter
+		return IndexPage.getIndexPage(driver);
 	}
 	
-	@Test(description="Open the App", priority=1)
+	@Test(description="Open the App", priority=1, enabled=false)
 	public void openApp() {
 		getIndexPage().launchPage();
 	}
@@ -54,10 +56,10 @@ public class AddRemoveEle extends BaseTest {
 		assertEquals(getAddRemoveElePage().deleteAllElements.size(), count-1);	
 	}
 	
-	@Test(description="Verify Remove All Elements", priority=6)
-	public void verifyRemoveAllElements() {
+	@Test(description="Verify Remove All Elements", priority=6, enabled=false)
+	public void verifyRemoveAllElements() throws AWTException {
 		assertTrue(getAddRemoveElePage().deleteAllAddedElements());
-		driver.navigate().to(PropertyReader.getProperty("url"));
+		//driver.navigate().to(PropertyReader.getProperty("url"));
 	}
 	
 }

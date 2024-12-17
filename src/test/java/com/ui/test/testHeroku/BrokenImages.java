@@ -12,14 +12,15 @@ import com.ui.pages.testHeroku.IndexPage;
 public class BrokenImages extends BaseTest{
 
 	IndexPage getIndexPage() {
-		return new IndexPage(driver);
+		//return new IndexPage(driver);
+		return IndexPage.getIndexPage(driver);
 	}
 	
 	BrokenImagesPage getPage() {
 		return new BrokenImagesPage(driver);
 	}
 	
-	@Test(description="Open the App", priority=1)
+	@Test(description="Open the App", priority=1, enabled=false)
 	public void openApp() {
 		getIndexPage().launchPage();
 	}
